@@ -1,0 +1,32 @@
+
+div {
+  flex-grow: 1;
+  border: 1px solid orange;
+}
+
+#main {
+  display: inline-flex;
+  flex-direction: column;
+  width: 66%;
+  height: 100%;
+  background-color: teal;
+}
+
+#portrait {
+  display: inline-flex;
+  width: 33%;
+  height: 100%;
+  background-color: salmon;
+}
+
+.top {
+  display: flex;
+}
+
+.middle {
+  display: flex;
+}
+
+.bottom {
+  display: flex;
+}

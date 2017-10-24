@@ -1,9 +1,27 @@
+* {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+button {
+  background: none;
+  border: 2px solid white;
+  height: 40px;
+  display: inline-block;
+}
+
+h2 {
+  margin: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
 div {
   width: 33.333%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 150px;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -13,7 +31,7 @@ body {
 }
 
 img {
-  height: 70px;
+  height: 60px;
 }
 
 #main {
@@ -25,6 +43,7 @@ img {
 
 #portrait {
   width: 40%;
+  display: flex;
   background-color: salmon;
   min-height: 450px;
 }
@@ -32,6 +51,7 @@ img {
 #double {
   width: 66.6666%;
   background-color: #61BA82;
+  justify-content: flex-start;
 }
 .two {
   background-color: #FBEAA1;
@@ -52,10 +72,25 @@ img {
   background-color: #3E8ABF;
 }
 .eight {
-  background-color: #E39C42;
+  background-color: #F9EAA9;
 }
 
-@media screen and (max-width: 800px) {
+.center-arrows {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  min-height: none;
+  justify-content: space-between;
+}
+
+.left-arrow,
+.right-arrow {
+  margin: 10px;
+  height: 35px; 
+}
+
+@media screen and (max-width: 850px) {
   div {
     width: 50%;
   }
@@ -65,16 +100,18 @@ img {
 }
 
 @media screen and (max-width: 450px) {
-  div, #double {
+  div, 
+  #double {
     width: 100%;
     height: 150px;
   }
   body {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   #portrait {
     width: 100%;
-    height: 300px;
+    min-height: 270px;
+    align-items: center; 
   }
   #main {
     width: 100%;

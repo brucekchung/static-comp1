@@ -2,11 +2,22 @@
   color: white;
   font-family: 'Roboto', sans-serif;
 }
+
 button {
   background: none;
   border: 2px solid white;
-  height: 40px;
-  display: inline-block;
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+h1, p {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+h1 {
+  font-size: 1.5em;
 }
 
 h2 {
@@ -42,8 +53,14 @@ img {
 }
 
 #portrait {
+  background-image: url('images/wizards.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 50%;
   width: 40%;
   display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   background-color: salmon;
   min-height: 450px;
 }
@@ -52,6 +69,7 @@ img {
   width: 66.6666%;
   background-color: #61BA82;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 .two {
   background-color: #FBEAA1;
@@ -82,6 +100,9 @@ img {
   align-self: center;
   min-height: none;
   justify-content: space-between;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);;
 }
 
 .left-arrow,
@@ -90,16 +111,64 @@ img {
   height: 35px; 
 }
 
-@media screen and (max-width: 850px) {
+.dots {
+  margin-left: 10px;
+  display: flex;
+  width: 80px;
+  flex-direction: row;
+  align-self: flex-start;
+  min-height: 50px;
+}
+
+.circle {
+  height: 10px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 880px) {
   div {
     width: 50%;
   }
   #double {
     width: 50%;
   }
+  h1 {
+    font-size: 1em;
+  }
+  #portrait {
+    background-position: 20% 50%;
+  }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
+  div, 
+  #double {
+    width: 50%;
+    height: 150px;
+  }
+  body {
+    flex-direction: column-reverse;
+  }
+  #portrait {
+    background-size: 100vh;
+    width: 100%;
+    min-height: 270px;
+    align-items: center; 
+  }
+  #main {
+    width: 100%;
+    overflow: scroll;
+  }
+  .dots{
+    max-height: 40px;
+  }
+  .center-arrows {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
   div, 
   #double {
     width: 100%;
